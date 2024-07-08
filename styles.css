@@ -50,6 +50,40 @@ section {
     margin-bottom: 40px;
 }
 
+/* Section: News */
+
+section#news {
+    margin-bottom: 40px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.news-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    margin: 5px 0;
+}
+
+.news-item a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* now back to the topic */
+
 h2 {
     font-size: 28px;
     border-bottom: 2px solid #000;
