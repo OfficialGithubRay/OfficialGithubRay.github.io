@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+#intro {
+ animation: fadeOut 1s ease-in;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
