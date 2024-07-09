@@ -33,6 +33,7 @@ header {
 }
 
 nav ul {
+    
     list-style: none;
     padding: 0;
     margin: 0;
@@ -46,7 +47,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
     color: #fff; /* White for contrast */
+}
+
+nav ul li a:hover {
+    color: #77C2FF; /* Hover color for links */
+    transform: translateY(-5px); /* Moves the link 5px up on hover */
 }
 
 .logo {
