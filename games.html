@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Neutral Development Social & Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-48x48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-64x64.png" sizes="64x64" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-128x128.png" sizes="128x128" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/QFbWzts/Roblox-Screen-Shot20240616-010453442.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for transparency */
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+            margin: auto; /* Center the content div */
+        }
+        .content main {
+            background-color: rgba(255, 255, 255, 0); /* Adjust alpha value (0.8) for opaque content */
+            padding: 0px;
+            border-radius: 10px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #77C2FF;
+            transform: translateY(-5px);
+        }
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 26, 67, 0.75);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bottom-bar-left {
+            text-align: left;
+        }
+        .bottom-bar-right {
+            text-align: right;
+        }
+        .bottom-bar-right a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .bottom-bar-right a:hover {
+            color: #fff;
+        }
+        .bottom-bar-right a img {
+            transition: filter 0.3s ease;
+        }
+        .bottom-bar-right a:hover img {
+            filter: grayscale(100%) brightness(200%);
+        }
+        h2, p {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .logo {
+                max-width: 80px;
+            }
+            main {
+                padding: 10px;
+            }
+            footer {
+                padding: 10px;
+            }
+            .bottom-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .bottom-bar-left, .bottom-bar-right {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="index.html#media">Media</a></li>
+                <li><a href="index.html#live">Live</a></li>
+                <li><a href="index.html#games">Games</a></li>
+                <li><a href="index.html#music">Music</a></li>
+                <li><a href="index.html#video">Video</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        <main>
+        <section id="Games">
+            <div class="news-item">
+              <h3>NSD Training Center</h3>
+              <p>Join the Neutral Security Division Group!
+
+Welcome to the NSD Training Center! 
+This is suitable for players to patrol, test, etc.
+I hope you'll be able to enjoy it.
+
+Read the NSD Handbook, in case you forget!
+
+[NOTE] The trainings are SCHEDULED, it is not always over and over again like some military games. Like some other games are mistakenly disliked for absolutely no reason.
+
+Operated by the Neutral Security Division</p>
+              <p>NSD Training Center</p>
+              <a href="https://www.roblox.com/games/17029814354/NSD-Training-Center">Go</a>
+    </div>
+        </section>
+    </main>
+    
+    <div class="bottom-bar">
+        <div class="bottom-bar-left">
+            &copy; Neutral Development Social & Event 2024
+        </div>
+        <div class="bottom-bar-right">
+         <a href="https://www.example.com" target="_blank">
+         <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="smol" border="0" class="logo">
+        </a>
+    </div>
+    </div>
+</body>
+</html>
