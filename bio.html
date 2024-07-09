@@ -25,40 +25,22 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
     <style>
         body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures full height of viewport */
-            overflow: hidden; /* Prevents scrolling */
-        }
-        .background-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             background-image: url('https://i.ibb.co/QFbWzts/Roblox-Screen-Shot20240616-010453442.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            filter: blur(10px); /* Blurs the background image */
-            z-index: -1; /* Places the background image behind other content */
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
-            backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+            background-color: rgba(255, 255, 255, 0.8);
         }
         nav ul {
             list-style: none;
@@ -72,7 +54,10 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #fff; /* White for contrast */
+            color: #000;
+        }
+        nav ul li a:hover {
+            color: #fff; /* Hover color for links */
         }
         .logo {
             max-width: 100px;
@@ -80,21 +65,18 @@
         }
         main {
             padding: 20px;
-            flex: 1; /* Takes remaining vertical space */
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
-            color: #fff; /* White for contrast */
-            backdrop-filter: blur(5px); /* Adds a blur effect to the background */
-        }
-        
-        /* Styles for text color */
-        h2, p {
-            color: #fff; /* White text color */
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
+        /* Styles for text color */
+        h2, p, nav ul li a {
+            color: #fff; /* White text color */
+        }
+        
         /* Mobile Styles */
         @media (max-width: 768px) {
             header {
