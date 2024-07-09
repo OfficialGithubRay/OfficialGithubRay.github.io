@@ -7,22 +7,15 @@
     <title>Bio - Neutral Development Social & Event</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Link to the site webmanifest file -->
     <link rel="manifest" href="images/site.webmanifest">
-    <!-- Standard favicon -->
     <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
-    <!-- PNG icons for different sizes -->
     <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="images/favicons/favicon-48x48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="images/favicons/favicon-64x64.png" sizes="64x64" type="image/png">
     <link rel="icon" href="images/favicons/favicon-128x128.png" sizes="128x128" type="image/png">
-    <!-- Additional favicons for Apple Touch Icons and Android -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
@@ -35,18 +28,24 @@
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .content {
-            flex: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
         }
         nav ul {
             list-style: none;
@@ -60,12 +59,12 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #000;
-            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color properties */
+            color: #fff;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
         nav ul li a:hover {
-            color: #fff; /* Hover color for links */
-            transform: translateY(-5px); /* Moves the link 5px up on hover */
+            color: #77C2FF;
+            transform: translateY(-5px);
         }
         .logo {
             max-width: 100px;
@@ -84,32 +83,24 @@
             text-align: center;
             padding: 10px 0;
         }
-
-        /* Styles for text color */
-        h2, p, nav ul li a {
-            color: #fff; /* White text color */
+        h2, p {
+            color: #fff;
         }
-        
-        /* Mobile Styles */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             nav ul {
                 flex-direction: column;
                 gap: 10px;
             }
-
             .logo {
                 max-width: 80px;
             }
-
             main {
                 padding: 10px;
             }
-
             footer {
                 padding: 10px;
             }
@@ -118,7 +109,6 @@
 </head>
 
 <body>
-    <div class="background-image"></div>
     <div class="content">
         <header>
             <a href="index.html">
