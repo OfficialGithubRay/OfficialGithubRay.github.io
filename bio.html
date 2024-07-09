@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
-    <style>
+  <style>
         body {
             background-image: url('https://i.ibb.co/QFbWzts/Roblox-Screen-Shot20240616-010453442.png');
             background-size: cover;
@@ -95,12 +95,17 @@
             text-align: right;
         }
         .bottom-bar-right a {
-            color: #77C2FF;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         .bottom-bar-right a:hover {
             color: #fff;
+        }
+        .bottom-bar-right a img {
+            transition: filter 0.3s ease;
+        }
+        .bottom-bar-right a:hover img {
+            filter: grayscale(100%) brightness(200%); /* Adjust filter values for color change */
         }
         h2, p {
             color: #fff;
@@ -158,8 +163,9 @@
         <div class="bio-container">
             <main>
                 <section id="bio">
-                    <h2>Bio</h2>
-                    <p>Welcome to the Bio section of Neutral Development Social & Event. Here, you can find information about our background, mission, and the team behind the scenes.</p>
+                    <h2 style="text-align:left">Bio</h2>
+                    <p style="text-align:left">Welcome to the Bio section of Neutral Development Social & Event. Here, you can find information about our background, mission, and the team behind the scenes.</p>
+                    <p style="text-align:left"> </p>
                     <!-- Add more bio content as needed -->
                 </section>
             </main>
@@ -171,7 +177,7 @@
         </div>
         <div class="bottom-bar-right">
          <a href="https://www.example.com" target="_blank">
-        <img src="path/to/your/logo.png" alt="Logo" class="logo">
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/X7QJc6S/neutra-white.png" alt="neutra-white" border="0" class="logo">
         </a>
     </div>
     </div>
