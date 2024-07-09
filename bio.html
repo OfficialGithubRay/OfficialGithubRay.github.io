@@ -34,6 +34,12 @@
             background-position: center;
             margin: 0;
             font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
         }
         header {
             display: flex;
@@ -68,10 +74,15 @@
         main {
             padding: 20px;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
             background-color: rgba(0, 26, 67, 0.75);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
 
         /* Styles for text color */
@@ -134,9 +145,9 @@
                 <!-- Add more bio content as needed -->
             </section>
         </main>
-        <footer>
-            <p>&copy; Neutral Development Social & Event 2024</p>
-        </footer>
+    </div>
+    <div class="bottom-bar">
+        &copy; Neutral Development Social & Event 2024
     </div>
 </body>
 
