@@ -89,3 +89,11 @@ footer {
         padding: 10px;
     }
 }
+
+<style>
+    /* Your existing CSS styles here */
+    /* Add the following styles to change text color */
+    h2, p {
+        color: #fff; /* White text color */
+    }
+</style>
