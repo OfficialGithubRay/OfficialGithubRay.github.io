@@ -40,7 +40,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
         nav ul {
             list-style: none;
@@ -55,9 +55,11 @@
         nav ul li a {
             text-decoration: none;
             color: #000;
+            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color properties */
         }
         nav ul li a:hover {
             color: #fff; /* Hover color for links */
+            transform: translateY(-5px); /* Moves the link 5px up on hover */
         }
         .logo {
             max-width: 100px;
@@ -69,7 +71,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 26, 67, 0.75);
         }
 
         /* Styles for text color */
