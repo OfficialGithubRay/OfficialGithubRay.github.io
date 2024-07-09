@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,11 +27,16 @@
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bio-container {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
@@ -46,6 +50,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
         }
         nav ul {
             list-style: none;
@@ -69,9 +74,6 @@
         .logo {
             max-width: 100px;
             height: auto;
-        }
-        main {
-            padding: 20px;
         }
         .bottom-bar {
             position: fixed;
@@ -109,32 +111,34 @@
 </head>
 
 <body>
+    <header>
+        <a href="index.html">
+            <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="index.html#media">Media</a></li>
+                <li><a href="index.html#live">Live</a></li>
+                <li><a href="index.html#games">Games</a></li>
+                <li><a href="index.html#music">Music</a></li>
+                <li><a href="index.html#video">Video</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="content">
-        <header>
-            <a href="index.html">
-                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="bio.html">Bio</a></li>
-                    <li><a href="index.html#news">News</a></li>
-                    <li><a href="index.html#media">Media</a></li>
-                    <li><a href="index.html#live">Live</a></li>
-                    <li><a href="index.html#games">Games</a></li>
-                    <li><a href="index.html#music">Music</a></li>
-                    <li><a href="index.html#video">Video</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="bio">
-                <h2>Bio</h2>
-                <p>Welcome to the Bio section of Neutral Development Social & Event. Here, you can find information about our background, mission, and the team behind the scenes.</p>
-                <!-- Add more bio content as needed -->
-            </section>
-        </main>
+        <div class="bio-container">
+            <main>
+                <section id="bio">
+                    <h2>Bio</h2>
+                    <p>Welcome to the Bio section of Neutral Development Social & Event. Here, you can find information about our background, mission, and the team behind the scenes.</p>
+                    <!-- Add more bio content as needed -->
+                </section>
+            </main>
+        </div>
     </div>
     <div class="bottom-bar">
         &copy; Neutral Development Social & Event 2024
