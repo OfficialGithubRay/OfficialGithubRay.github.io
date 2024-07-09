@@ -35,9 +35,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
         .bio-container {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
             color: white;
@@ -50,7 +51,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.5);
         }
         nav ul {
             list-style: none;
@@ -82,8 +83,24 @@
             width: 100%;
             background-color: rgba(0, 26, 67, 0.75);
             color: white;
-            text-align: center;
-            padding: 10px 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bottom-bar-left {
+            text-align: left;
+        }
+        .bottom-bar-right {
+            text-align: right;
+        }
+        .bottom-bar-right a {
+            color: #77C2FF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .bottom-bar-right a:hover {
+            color: #fff;
         }
         h2, p {
             color: #fff;
@@ -105,6 +122,14 @@
             }
             footer {
                 padding: 10px;
+            }
+            .bottom-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .bottom-bar-left, .bottom-bar-right {
+                text-align: center;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -141,8 +166,14 @@
         </div>
     </div>
     <div class="bottom-bar">
-        &copy; Neutral Development Social & Event 2024
+        <div class="bottom-bar-left">
+            &copy; Neutral Development Social & Event 2024
+        </div>
+        <div class="bottom-bar-right">
+         <a href="https://www.example.com" target="_blank">
+        <img src="path/to/your/logo.png" alt="Logo" class="logo">
+        </a>
+    </div>
     </div>
 </body>
-
 </html>
