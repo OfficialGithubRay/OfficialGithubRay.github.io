@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio - Neutral Development Social & Event</title>
+    <meta name="description" content="Neutral Development Social & Event - Bio page. Learn more about our journey and roadmap.">
+    <meta name="keywords" content="Neutral Development, Social, Event, Bio, Roadmap, Media, Live, Games, Music, Video, Contact">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="manifest" href="images/site.webmanifest">
@@ -29,12 +31,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            color: white;
         }
         .content {
             background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for transparency */
             padding: 20px;
             border-radius: 10px;
-            color: white;
             text-align: center;
             width: 80%;
             max-width: 800px;
@@ -72,7 +74,7 @@
             transform: translateY(-5px);
         }
         .logo {
-            max-width: 100px;
+            max-width: 100px; /* Adjust this value as needed */
             height: auto;
         }
         .bottom-bar {
@@ -81,17 +83,19 @@
             left: 0;
             width: 100%;
             background-color: rgba(0, 26, 67, 0.75);
-            color: white;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
-        .bottom-bar-left {
+        .bottom-bar-left,
+        .bottom-bar-right {
             text-align: left;
         }
         .bottom-bar-right {
-            text-align: right;
+            display: flex;
+            gap: 15px;
         }
         .bottom-bar-right a {
             text-decoration: none;
@@ -102,6 +106,8 @@
         }
         .bottom-bar-right a img {
             transition: filter 0.3s ease;
+            max-width: 50px; /* Adjust this value to control the size */
+            height: auto;
         }
         .bottom-bar-right a:hover img {
             filter: grayscale(100%) brightness(200%);
@@ -135,6 +141,9 @@
                 text-align: center;
                 margin-bottom: 10px;
             }
+            .bottom-bar-right {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -159,15 +168,25 @@
         </nav>
     </header>
     
+    <div class="content">
+        <main>
+            <h2>About Us</h2>
+            <p>Welcome to Neutral Development Social & Event. Learn more about our journey and roadmap.</p>
+        </main>
+    </div>
+
     <div class="bottom-bar">
         <div class="bottom-bar-left">
             &copy; Neutral Development Social & Event 2024
         </div>
         <div class="bottom-bar-right">
-         <a href="https://www.example.com" target="_blank">
-         <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="smol" border="0" class="logo">
-        </a>
-    </div>
+            <a href="https://www.example.com" target="_blank">
+                <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="smol" class="logo">
+            </a>
+            <a href="https://www.example2.com" target="_blank">
+                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo">
+            </a>
+        </div>
     </div>
 </body>
 </html>
