@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio - Neutral Development Social & Event</title>
+    <title>Roadmap - Neutral Development Social & Event</title>
     <meta name="description" content="Neutral Development Social & Event - Bio page. Learn more about our journey and roadmap.">
     <meta name="keywords" content="Neutral Development, Social, Event, Bio, Roadmap, Media, Live, Games, Music, Video, Contact">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,17 +34,18 @@
             color: white;
         }
         .content {
-            background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for transparency */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             width: 80%;
             max-width: 800px;
-            margin: auto; /* Center the content div */
+            margin: auto;
+            box-sizing: border-box;
         }
         .content main {
-            background-color: rgba(255, 255, 255, 0); /* Adjust alpha value (0.8) for opaque content */
-            padding: 0px;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 0;
             border-radius: 10px;
         }
         header {
@@ -53,6 +54,20 @@
             align-items: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: transform 0.3s ease;
         }
         nav ul {
             list-style: none;
@@ -74,7 +89,7 @@
             transform: translateY(-5px);
         }
         .logo {
-            max-width: 100px; /* Adjust this value as needed */
+            max-width: 100px;
             height: auto;
         }
         .bottom-bar {
@@ -88,6 +103,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            box-sizing: border-box;
         }
         .bottom-bar-left,
         .bottom-bar-right {
@@ -95,19 +111,21 @@
         }
         .bottom-bar-right {
             display: flex;
-            gap: 15px;
+            gap: 0; /* Remove gap to make logos connect */
         }
         .bottom-bar-right a {
             text-decoration: none;
             transition: color 0.3s ease;
+            padding: 5px;
         }
         .bottom-bar-right a:hover {
             color: #fff;
         }
         .bottom-bar-right a img {
             transition: filter 0.3s ease;
-            max-width: 50px; /* Adjust this value to control the size */
+            max-width: 50px;
             height: auto;
+            margin: 0; /* Remove margins to make logos connect */
         }
         .bottom-bar-right a:hover img {
             filter: grayscale(100%) brightness(200%);
@@ -116,21 +134,26 @@
             color: #fff;
         }
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
+            .menu-toggle {
+                display: flex;
             }
             nav ul {
                 flex-direction: column;
                 gap: 10px;
+                display: none;
+            }
+            nav ul li {
+                display: block;
+                text-align: center;
+            }
+            nav ul.active {
+                display: flex;
             }
             .logo {
                 max-width: 80px;
             }
-            main {
-                padding: 10px;
-            }
-            footer {
+            .content {
+                width: 90%;
                 padding: 10px;
             }
             .bottom-bar {
@@ -145,6 +168,14 @@
                 flex-direction: column;
             }
         }
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 5px;
+            }
+            .bottom-bar-right a img {
+                max-width: 40px;
+            }
+        }
     </style>
 </head>
 
@@ -154,6 +185,11 @@
             <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo">
         </a>
         <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="bio.html">Bio</a></li>
@@ -181,12 +217,25 @@
         </div>
         <div class="bottom-bar-right">
             <a href="https://www.example.com" target="_blank">
-                <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="smol" class="logo">
+                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Roblox Group">
             </a>
             <a href="https://www.example2.com" target="_blank">
-                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo">
+                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Discord Server">
+            </a>
+           <a href="https://www.example2.com" target="_blank">
+                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Discord Server">
+            </a>
+           <a href="https://www.example2.com" target="_blank">
+                <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Discord Server">
             </a>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
