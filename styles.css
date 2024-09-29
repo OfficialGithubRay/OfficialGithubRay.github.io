@@ -83,6 +83,22 @@ main {
     z-index: 10;
 }
 
+.bottom-bar-right {
+    display: flex;
+    justify-content: center; /* Center align the logos */
+    gap: 20px; /* Add some space between the logos */
+}
+
+.footer-logo {
+    width: 40px; /* Set the size of the logos */
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.footer-logo:hover {
+    filter: grayscale(100%) brightness(200%);
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
