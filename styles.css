@@ -21,71 +21,41 @@ body {
     max-width: 800px;
     margin: 20px auto; /* Add margin to avoid overlap */
 }
-
+/* General styling for the top bar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Adjust padding to make logo smaller */
+    padding: 10px 20px; /* Adjust padding for smaller top bar */
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Logo size adjustments */
 .upper-logo {
-    max-width: 70px; /* Smaller logo size for the top */
+    max-width: 70px; /* Smaller logo size */
     height: auto;
 }
 
-.countdown {
-    font-size: 24px;
-    color: #77C2FF;
-    margin: 20px 0;
+/* Media query for landscape orientation */
+@media screen and (orientation: landscape) {
+    /* Reduce top bar height in landscape mode */
+    header {
+        padding: 5px 15px; /* Smaller padding for top bar */
+    }
+
+    /* Resize the logo specifically for landscape mode */
+    .upper-logo {
+        max-width: 50px; /* Smaller logo size for landscape mode */
+        height: auto;
+    }
+
+    /* Adjust other elements if needed */
+    nav ul {
+        gap: 10px; /* Slightly reduce gap between menu items */
+    }
 }
 
-.maintenance-label {
-    font-size: 24px;
-    color: #fff;
-    margin-top: 20px;
-}
-
-.bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 26, 67, 0.75);
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.bottom-bar-left {
-    text-align: left;
-}
-
-.bottom-bar-right {
-    text-align: right;
-    display: flex;
-    justify-content: center; /* Center align the logos */
-    gap: 20px; /* Add space between the logos */
-}
-
-.footer-logo {
-    width: 40px; /* Adjust the size of the bottom logos */
-    height: auto;
-    transition: filter 0.3s ease;
-}
-
-.footer-logo:hover {
-    filter: grayscale(100%) brightness(200%);
-}
-
-/* Ensures proper spacing to avoid overlap between content and footer */
-main {
-    margin-bottom: 60px; /* Add space to avoid the bottom-bar overlap */
-}
-
+/* Mobile specific adjustments for smaller screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -98,7 +68,7 @@ main {
     }
 
     .upper-logo {
-        max-width: 50px; /* Smaller logo for mobile view */
+        max-width: 50px; /* Even smaller logo for mobile */
     }
 
     .bottom-bar {
