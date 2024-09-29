@@ -1,74 +1,50 @@
 body {
+    background-image: url('https://i.ibb.co/QFbWzts/Roblox-Screen-Shot20240616-010453442.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto; /* Allow scrolling */
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     color: white;
     text-align: center;
     width: 80%;
     max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto; /* Add margin to avoid overlap */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px; /* Adjust padding to make logo smaller */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    color: #fff;
-}
-
-nav ul li a:hover {
-    color: #77C2FF;
-    transform: translateY(-5px);
-}
-
-.logo {
-    max-width: 100px;
+.upper-logo {
+    max-width: 70px; /* Smaller logo size for the top */
     height: auto;
 }
 
-.content {
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for transparency */
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    width: 80%;
-    max-width: 800px;
-    margin: auto; /* Center the content div */
+.countdown {
+    font-size: 24px;
+    color: #77C2FF;
+    margin: 20px 0;
 }
 
-.content main {
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust alpha value (0.8) for opaque content */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-main {
-    padding: 20px;
+.maintenance-label {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 20px;
 }
 
 .bottom-bar {
@@ -78,19 +54,25 @@ main {
     width: 100%;
     background-color: rgba(0, 26, 67, 0.75);
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 10;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-bar-left {
+    text-align: left;
 }
 
 .bottom-bar-right {
+    text-align: right;
     display: flex;
     justify-content: center; /* Center align the logos */
-    gap: 20px; /* Add some space between the logos */
+    gap: 20px; /* Add space between the logos */
 }
 
 .footer-logo {
-    width: 40px; /* Set the size of the logos */
+    width: 40px; /* Adjust the size of the bottom logos */
     height: auto;
     transition: filter 0.3s ease;
 }
@@ -99,26 +81,38 @@ main {
     filter: grayscale(100%) brightness(200%);
 }
 
+/* Ensures proper spacing to avoid overlap between content and footer */
+main {
+    margin-bottom: 60px; /* Add space to avoid the bottom-bar overlap */
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
     }
+
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
-    .logo {
-        max-width: 80px;
-    }
-    main {
-        padding: 10px;
-    }
-    footer {
-        padding: 10px;
-    }
-}
 
-h2, p {
-    color: #fff;
+    .upper-logo {
+        max-width: 50px; /* Smaller logo for mobile view */
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bottom-bar-left,
+    .bottom-bar-right {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin-bottom: 100px; /* Extra margin on mobile to avoid overlap */
+    }
 }
