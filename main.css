@@ -14,9 +14,8 @@ header {
     color: #fff;
 }
 
-/* Logo in the header (top bar) */
 .logo {
-    width: 32px; /* You can change to 64px if you want it larger */
+    width: 32px; /* Adjust to 64px if needed */
     height: auto;
 }
 
@@ -62,14 +61,12 @@ footer {
     bottom: 0;
 }
 
-/* Logos in the footer (bottom bar) */
 .footer-logo {
-    width: 32px; /* You can also use 64px if needed */
+    width: 32px; /* Adjust to 64px if needed */
     height: auto;
-    margin-left: 10px; /* Optional, for spacing between logos */
+    margin-left: 10px;
 }
 
-/* Additional changes for text alignment in footer */
 .bottom-bar {
     display: flex;
     justify-content: space-between;
