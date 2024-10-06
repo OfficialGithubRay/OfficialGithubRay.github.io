@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under-Maintenance</title>
+    <title>Site Under Maintenance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="manifest" href="images/site.webmanifest">
+    
+    <!-- Favicon Links -->
     <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="images/favicons/favicon-48x48.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="images/favicons/favicon-64x64.png" sizes="64x64" type="image/png">
-    <link rel="icon" href="images/favicons/favicon-128x128.png" sizes="128x128" type="image/png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    
+    <!-- Font Link -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
@@ -45,33 +45,10 @@
 
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 15px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #77C2FF;
-            transform: translateY(-5px);
         }
 
         .logo {
@@ -87,7 +64,6 @@
 
         .maintenance-label {
             font-size: 24px;
-            color: #fff;
             margin-top: 20px;
         }
 
@@ -104,53 +80,31 @@
             align-items: center;
         }
 
-        .bottom-bar-left {
-            text-align: left;
-        }
-
-        .bottom-bar-right {
-            text-align: right;
-        }
-
         .bottom-bar-right a {
             text-decoration: none;
-            transition: color 0.3s ease;
+            margin-left: 10px;
+            transition: color 0.3s ease, filter 0.3s ease;
         }
 
         .bottom-bar-right a:hover {
             color: #fff;
         }
 
-        .bottom-bar-right a img {
-            transition: filter 0.3s ease;
-        }
-
         .bottom-bar-right a:hover img {
             filter: grayscale(100%) brightness(200%);
         }
 
-        h2,
-        p {
+        h2, p {
             color: #fff;
         }
 
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
             }
 
             .logo {
                 max-width: 80px;
-            }
-
-            footer {
-                padding: 10px;
             }
 
             .bottom-bar {
@@ -158,9 +112,7 @@
                 text-align: center;
             }
 
-            .bottom-bar-left,
-            .bottom-bar-right {
-                text-align: center;
+            .bottom-bar-left, .bottom-bar-right {
                 margin-bottom: 10px;
             }
         }
@@ -195,32 +147,34 @@
 </head>
 
 <body>
-  <header>
-    <a href="index.html">
-        <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo upper-logo">
-    </a>
-</header>
+    <header>
+        <a href="index.html">
+            <img src="https://i.ibb.co/njm5vsX/20240708-194734.png" alt="Neutral Development Social & Event" class="logo upper-logo">
+        </a>
+    </header>
 
-<main class="content">
-    <h2>Live Countdown</h2>
-    <div id="countdown" class="countdown"></div>
+    <main class="content">
+        <h2>Live Countdown</h2>
+        <div id="countdown" class="countdown"></div>
+        <div class="maintenance-label">This site is under maintenance. Powered by Github.</div>
+    </main>
 
-    <div class="maintenance-label">This site is under maintenance. Powered by Github.</div>
-</main>
-
-<div class="bottom-bar">
-    <div class="bottom-bar-left">
-        &copy; Neutral Ray JL 2024
+    <div class="bottom-bar">
+        <div class="bottom-bar-left">
+            &copy; Neutral Ray JL 2024
+        </div>
+        <div class="bottom-bar-right">
+            <a href="https://www.example.com" target="_blank">
+                <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="Logo 1" class="footer-logo">
+            </a>
+            <a href="https://www.example2.com" target="_blank">
+                <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="Neutral Development" class="footer-logo">
+            </a>
+            <a href="https://github.com/about" target="_blank">
+                <img src="https://i.ibb.co/HnYtn6j/favicon-32x32.png" alt="About GitHub" class="footer-logo">
+            </a>
+        </div>
     </div>
-    <div class="bottom-bar-right">
-        <a href="https://www.example.com" target="_blank">
-            <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="Logo 1" class="footer-logo">
-        </a>
-        <a href="https://www.example2.com" target="_blank">
-            <img src="https://i.ibb.co/mJjYwfn/smol.png" alt="Neutral Development" class="footer-logo">
-        </a>
-        <a href="https://github.com/about" target="_blank">
-            <img src="https://i.ibb.co/HnYtn6j/favicon-32x32.png" alt="About GitHub" class="footer logo" border="0"></a>
-        </a>
-    </div>
-</div>
+</body>
+
+</html>
