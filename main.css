@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-    width: 32px; /* Adjust to 64px if needed */
+    width: 64px; /* Adjust to 64px if needed */
     height: auto;
 }
 
@@ -62,7 +62,7 @@ footer {
 }
 
 .footer-logo {
-    width: 32px; /* Adjust to 64px if needed */
+    width: 64px; /* Adjust to 64px if needed */
     height: auto;
     margin-left: 10px;
 }
