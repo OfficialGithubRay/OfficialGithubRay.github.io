@@ -1,75 +1,130 @@
+/* Base Reset & Layout */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
+  margin: 0;
+  font-family: sans-serif;
+  background: white;
+  color: black;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
+/* Top Navigation Bar */
+.top-bar {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.logo {
-    width: 64px; /* Adjust to 64px if needed */
-    height: auto;
+.top-bar .center i {
+  font-size: 20px;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.top-bar .left,
+.top-bar .right {
+  white-space: nowrap;
 }
 
-nav ul li {
-    margin-left: 20px;
+.top-bar .center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+/* Bottom Navigation */
+.bottom-nav-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
 }
 
-main {
-    padding: 20px;
+.tooltip {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  white-space: nowrap;
 }
 
-section {
-    margin-bottom: 40px;
+.bottom-nav {
+  background: black;
+  padding: 8px 12px;
+  border-radius: 30px;
+  display: flex;
+  gap: 18px;
 }
 
-h2 {
-    font-size: 28px;
-    border-bottom: 2px solid #000;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.bottom-nav a {
+  color: white;
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
 }
 
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.bottom-nav a.active {
+  background: #444;
 }
 
-.footer-logo {
-    width: 64px; /* Adjust to 64px if needed */
-    height: auto;
-    margin-left: 10px;
+/* Dark Mode Icon */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 22px;
+  color: black;
+  z-index: 999;
 }
 
-.bottom-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+/* ==========================
+   RESPONSIVE STYLES
+   ========================== */
+
+/* Tablet and Larger */
+@media (min-width: 768px) {
+  .top-bar {
+    padding: 12px 40px;
+  }
+
+  .bottom-nav-container {
+    left: 40px;
+  }
+
+  .bottom-nav {
+    gap: 24px;
+    padding: 10px 16px;
+  }
+
+  .bottom-nav a {
+    font-size: 22px;
+  }
+
+  .dark-mode-toggle {
+    right: 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .bottom-nav-container {
+    bottom: 30px;
+  }
+
+  .dark-mode-toggle {
+    bottom: 30px;
+  }
 }
